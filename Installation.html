@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/proto.css">
+    <link rel="stylesheet" href="css/vendor/highlight.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="proto-header">
+        <section class="proto-header--head">
+            <h1>Proto Theme</h1>
+        </section>
+        <nav class="proto-header--body">
+            <ul>
+                <li><a href="Overview.html">Overview</a></li>
+                <li><a href="Getting Started.html">Getting Started</a></li>
+                <li><a href="Installation.html">Installation</a></li>
+                <li><a href="Build.html">Build</a></li>
+                <li><a href="Markdown.html">Markdown</a></li>
+                <li><a href="Advanced.html">Advanced</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="proto-markdown">
+        <h2>Installation</h2>
+        <p>If you already have a <code>Node</code> project set up and you want
+            to start documenting it, just skip to step 3.</p>
+        <ol>
+            <li>
+                <p>First, open a command prompt and create a directory named whatever you want and navigate into it.</p>
+                <pre><code class="language-bash">mkdir proto-test &amp;&amp; cd proto-test</code></pre>
+            </li>
+            <li>
+                <p>Before we begin developing and installing dependencies it&#39;s good to
+                    initialize your project with npm.</p>
+                <pre><code class="language-bash">npm init -y</code></pre>
+            </li>
+            <li>
+                <p>Make sure your in your projects root directory and run the following command.</p>
+                <pre><code class="language-bash">npm install @toolio/docs @toolio/proto-theme --save-dev</code></pre>
+            </li>
+        </ol>
+        <p>If the dependencies were installed, you can proceed to <a href="Build.html">Build</a>.</p>
+        <h3>Report Issues</h3>
+        <p>If you encountered an error, during the Installation process, please submit a
+            <a href="https://github.com/tooliojs/proto-theme/issues/new/choose">Bug Report</a>. We
+            will try our best to fix the issue as quick as possible. On the other hand,
+            the project is open source. You always have the option to clone it, and
+            try and solve the issue yourself. We really appreciate all the help
+            we can get :heart:</p>
+    </main>
+    <script src="js/vendor/fontawesome.js"></script>
+    <script src="js/vendor/highlight.js"></script>
+    <script src="js/vendor/ezmoji.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+:root {
+    --color-primary: #5B5F97;
+    --color-secondary: #F4AC32;
+    --color-background: #F5F5F5;
+    --color-background-header: #FFFFFF;
+    --font-primary: 'Open Sans', sans-serif;
+    --font-secondary: 'Fira Code', monospace;
+    --nav-width: 280px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.proto-header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background: var(--color-background-header);
+    width: var(--nav-width);
+    height: 100vh;
+    -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    -ms-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    -o-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.proto-header:hover {
+    overflow-y: auto;
+}
+    .proto-header--head {
+        color: var(--color-primary);
+        padding: 20px;
+    }
+        .proto-header--head h1 {
+            margin: 0;
+        }
+    /* .proto-header--body {} */
+        .proto-header--body ul {
+            margin: 0;
+            padding: 0;
+            list-style-position: inside;
+            list-style-type: none;
+        }
+            .proto-header--body ul li {
+                font-size: 17px;
+            }
+                .proto-header--body ul li a {
+                    display: block;
+                    text-decoration: none;
+                    margin: 10px 20px;
+                    color: var(--color-primary);
+                }
+
+.proto-markdown {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    padding-right: 200px;
+    padding-left: 480px;
+    width: 100%;
+    min-height: 100%;
+    background: var(--color-background);
+}
+    .proto-markdown * {
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        line-height: 30px;
+    }
+    /* Headings */
+    .proto-markdown h1,
+    .proto-markdown h2,
+    .proto-markdown h3,
+    .proto-markdown h4,
+    .proto-markdown h5,
+    .proto-markdown h6 {
+      color: var(--color-primary);
+    }
+    .proto-markdown h1 {
+      margin-bottom: 40px;
+    }
+    /* Paragraph */
+    .proto-markdown p {
+        font-size: 15px;
+        margin: 30px 0;
+    }
+    /* Image */
+    .proto-markdown img {
+        width: 100%;
+    }
+    /* HR */
+    .proto-markdown hr {
+      color: var(--color-primary);
+    }
+    /* Links */
+    .proto-markdown a {
+        color: var(--color-secondary);
+        text-decoration: none;
+    }
+    /* Lists */
+    /* .proto-markdown ul {} */
+        .proto-markdown ul li,
+        .proto-markdown ol li {
+            padding: 6px;
+        }
+    /* Code */
+    /* .proto-markdown pre {} */
+        .proto-markdown code {
+            border: 1px solid #d1d5da;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-family: var(--font-secondary);
+            background: white;
+        }
+    /* Table */
+    .proto-markdown table tr {
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+      }
+      .proto-markdown table th {
+        display: none;
+      }
+      .proto-markdown table td {
+        display: block;
+      }
+      .proto-markdown table td:first-child {
+        padding-top: .5em;
+      }
+      .proto-markdown table td:last-child {
+        padding-bottom: .5em;
+      }
+      .proto-markdown table td:before {
+        content: attr(data-th) ": ";
+        font-weight: bold;
+        width: 6.5em;
+        display: inline-block;
+      }
+      @media (min-width: 480px) {
+        .proto-markdown table td:before {
+          display: none;
+        }
+      }
+      .proto-markdown table th, 
+      .proto-markdown table td {
+        text-align: left;
+      }
+      .proto-markdown table th[align="right"], 
+      .proto-markdown table td[align="right"] {
+        text-align: right;
+      }
+      @media (min-width: 480px) {
+        .proto-markdown table th, 
+        .proto-markdown table td {
+          display: table-cell;
+          padding: .25em .5em;
+        }
+        .proto-markdown table th:first-child, 
+        .proto-markdown table td:first-child {
+          padding-left: 0;
+        }
+        .proto-markdown table th:last-child, 
+        .proto-markdown table td:last-child {
+          padding-right: 0;
+        }
+      }
+      
+      .proto-markdown table {
+        background: white;
+        border-radius: .4em;
+        overflow: hidden;
+        width: 100%;
+        border: 1px solid #d1d5da;
+      }
+      .proto-markdown table tr {
+        border-color: #46637f;
+      }
+      .proto-markdown table th, 
+      .proto-markdown table td {
+        margin: .5em 1em;
+      }
+      @media (min-width: 480px) {
+        .proto-markdown table th, 
+        .proto-markdown table td {
+          padding: 1em !important;
+        }
+      }
+      .proto-markdown table th, 
+      .proto-markdown table td:before {
+        color: var(--color-primary);
+      }    

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/proto.css">
+    <link rel="stylesheet" href="css/vendor/highlight.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="proto-header">
+        <section class="proto-header--head">
+            <h1>Proto Theme</h1>
+        </section>
+        <nav class="proto-header--body">
+            <ul>
+                <li><a href="Overview.html">Overview</a></li>
+                <li><a href="Getting Started.html">Getting Started</a></li>
+                <li><a href="Installation.html">Installation</a></li>
+                <li><a href="Build.html">Build</a></li>
+                <li><a href="Markdown.html">Markdown</a></li>
+                <li><a href="Advanced.html">Advanced</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="proto-markdown">
+        <h2>Build</h2>
+        <p>Now that all the dependencies are installed, we can continue to
+            build a documentation website using @toolio/docs and @toolio/proto-theme.</p>
+        <p>We&#39;re going to use @toolio/docs default options to quickly get our docs up and running.</p>
+        <ol>
+            <li>
+                <p>Create a directory named &quot;docs&quot; in the directory root of your project.</p>
+                <pre><code class="language-bash">mkdir docs</code></pre>
+            </li>
+            <li>
+                <p>Populate the &quot;docs&quot; directory with some <code>.md</code> files (your documentation). You can
+                    use <a href="https://github.com/tooliojs/proto-theme/tree/master/docs">proto-theme&#39;s documentation</a>
+                    as dummy data if you&#39;d like. Your project structure should look similar to this.</p>
+                <pre><code class="language-txt">docs/
+ docs.md
+ go.md
+ here.md
+ your.md
+node_modules/
+package.json
+package-lock.json</code></pre>
+            </li>
+            <li>
+                <p>Create a JavaScript file somewhere in your project directory. Inside that file we&#39;ll call the
+                    docs.build() function to generate our documentation. Here&#39;s how.</p>
+                <pre><code class="language-js">// yourfile.js
+require(&#39;@toolio/docs&#39;).build(&#39;html&#39;, {
+ theme: &#39;proto&#39;,
+ order: [
+     &#39;your&#39;,
+     &#39;docs&#39;,
+     &#39;go&#39;,
+     &#39;here
+ ]
+})</code></pre>
+                <p>The <code>order</code> should be an array of markdown file names. It&#39;s used to determine the top to bottom rendering
+                    of the documentation menu. Simply pass in the names of your markdown files
+                    excluding the extension (<code>.md</code>), and your docs will be built in that specific order.</p>
+            </li>
+            <li>
+                <p>Finally, run the script you created to generate your docs.</p>
+                <pre><code class="language-bash">node yourfile.js</code></pre>
+                <p>If you look in the &quot;docs&quot; direcotry, there should be a newly created directory called <code>__build__</code>. Congrats
+                    on making it this far.
+                    Your project now has documentation in Markdown and HTML! That&#39;s great. But wait, there&#39;s more. Check out
+                    <a href="Markdown.html">Markdown</a> for details on some features included with this theme.</p>
+            </li>
+        </ol>
+        <h3>Report Issues</h3>
+        <p>If you encountered an error, during the Build process, please submit a
+            <a href="https://github.com/tooliojs/proto-theme/issues/new/choose">Bug Report</a>. We
+            will try our best to fix the issue as quick as possible. On the other hand,
+            the project is open source. You always have the option to clone it, and
+            try and solve the issue yourself. We really appreciate all the help
+            we can get :heart:</p>
+    </main>
+    <script src="js/vendor/fontawesome.js"></script>
+    <script src="js/vendor/highlight.js"></script>
+    <script src="js/vendor/ezmoji.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
